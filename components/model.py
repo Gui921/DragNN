@@ -89,11 +89,9 @@ class NeuralNetwork(nn.Module):
 
 
 # TEST
-
 #model = NeuralNetwork(15, 2)
 #model.add_dense_layer(5)
 #model.add_dense_layer(2)
-
 #print(model)
 
 

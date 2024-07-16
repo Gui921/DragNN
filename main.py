@@ -1,4 +1,6 @@
 import tkinter as tk
+from components.draggable_widget import DraggableWidget
+from components.model import NeuralNetwork
 
 def main():
     root = tk.Tk()
@@ -31,8 +33,12 @@ def main():
         ]
     
     for layer in layers:
-        button = tk.Button(layers_frame, text=layer,height=3 ,foreground='#dbdbdb',bg='#3f3f3f')
-        button.pack(fill="x", pady=5)
+        label = tk.Label(layers_frame, text=layer, bg="#dbdbdb", width=10, height=2)
+        DraggableWidget(layers_frame, label, 50, 50)
+        label.pack(fill='x',pady=5)
+
+        #button = tk.Button(layers_frame, text=layer,height=3 ,foreground='#dbdbdb',bg='#3f3f3f')
+        #button.pack(fill="x", pady=5)
         
     root.mainloop()
 
